@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DV8 Coffee | Born Different. Brewed Better.</title>
+
+<style>
+/* ===== GLOBAL ===== */
+* { margin:0; padding:0; box-sizing:border-box; }
+body{
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background:#0f1b3d; /* luxury dark blue */
+    color:#ffffff;
+    line-height:1.6;
+}
+a{ color:#d4af37; text-decoration:none; }
+.container{ width:90%; max-width:1200px; margin:auto; }
+
+/* ===== HEADER ===== */
+header{
+    padding:120px 20px;
+    text-align:center;
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), #0f1b3d;
+    border-bottom:3px solid #d4af37;
+}
+header h1{
+    font-size:4em;
+    letter-spacing:3px;
+}
+header p{
+    font-size:1.4em;
+    margin-top:10px;
+    font-style:italic;
+}
+
+/* ===== SECTION ===== */
+section{
+    padding:70px 0;
+}
+section h2{
+    font-size:2.2em;
+    margin-bottom:30px;
+    border-bottom:2px solid #d4af37;
+    display:inline-block;
+    padding-bottom:8px;
+}
+
+/* ===== FEATURED ===== */
+.featured{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+.card{
+    background:rgba(255,255,255,.06);
+    border-radius:15px;
+    overflow:hidden;
+    text-align:center;
+}
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+.card h3{ margin:15px 0 5px; }
+.card span{
+    display:block;
+    margin-bottom:15px;
+    color:#d4af37;
+    font-weight:bold;
+}
+
+/* ===== MENU ===== */
+.menu-item{
+    display:flex;
+    justify-content:space-between;
+    padding:12px 0;
+    border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+/* ===== GALLERY ===== */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+.gallery img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+/* ===== LOCATIONS ===== */
+.locations{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+.location{
+    background:rgba(255,255,255,.06);
+    padding:25px;
+    border-radius:15px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    padding:40px 20px;
+    text-align:center;
+    background:#070d22;
+    border-top:3px solid #d4af37;
+    font-style:italic;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:600px){
+    header h1{ font-size:2.8em; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== HERO ===== -->
+<header>
+    <h1>DV8 Coffee</h1>
+    <p>Born Different. Brewed Better.</p>
+</header>
+
+<div class="container">
+
+<!-- ===== ABOUT ===== -->
+<section>
+<h2>About DV8 Coffee</h2>
+<p>
+‎ديڤيت كوفي | DV8 Coffee<br><br>
+DV8 Coffee was founded by <strong>Mohammed Sahil</strong>, built on passion, creativity,
+and a deep love for coffee. With our own processed coffee beans dating back to the 1990s,
+we proudly deviate from the ordinary to deliver premium flavors and unforgettable moments.
+</p>
+<p>
+From luxury desserts and crepes to handcrafted espresso beverages,
+DV8 Coffee blends modern elegance with heartfelt hospitality.
+</p>
+</section>
+
+<!-- ===== FEATURED ITEMS ===== -->
+<section>
+<h2>Must Try</h2>
+<div class="featured">
+    <div class="card">
+        <img src="images/featured1.jpg" alt="Signature Coffee">
+        <h3>Signature Chocolate Coffee</h3>
+        <span>22 SAR</span>
+    </div>
+    <div class="card">
+        <img src="images/featured2.jpg" alt="Waffle">
+        <h3>Belgian Waffle</h3>
+        <span>30 SAR</span>
+    </div>
+    <div class="card">
+        <img src="images/featured3.jpg" alt="Crepe">
+        <h3>Nutella Crepe</h3>
+        <span>26 SAR</span>
+    </div>
+</div>
+</section>
+
+<!-- ===== MENU ===== -->
+<section>
+<h2>Our Menu</h2>
+
+<div class="menu-item"><span>Spanish Latte</span><span>18 SAR</span></div>
+<div class="menu-item"><span>Cappuccino</span><span>15 SAR</span></div>
+<div class="menu-item"><span>Americano</span><span>14 SAR</span></div>
+<div class="menu-item"><span>Chocolate Crepe</span><span>26 SAR</span></div>
+<div class="menu-item"><span>Chicken Pesto Crepe</span><span>29 SAR</span></div>
+
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section>
+<h2>Gallery</h2>
+<div class="gallery">
+    <img src="images/gallery1.jpg" alt="Coffee">
+    <img src="images/gallery2.jpg" alt="Dessert">
+    <img src="images/gallery3.jpg" alt="Cafe Interior">
+    <img src="images/gallery4.jpg" alt="Espresso">
+</div>
+</section>
+
+<!-- ===== LOCATIONS ===== -->
+<section>
+<h2>Our Locations</h2>
+<div class="locations">
+    <div class="location">
+        <h3>Oman</h3>
+        <p>Serving premium coffee and desserts across Oman.</p>
+    </div>
+    <div class="location">
+        <h3>Jubail, Saudi Arabia</h3>
+        <p>Proudly serving Jubail with luxury café experience.</p>
+    </div>
+</div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section>
+<h2>Contact Us</h2>
+<p>Instagram: <a href="https://instagram.com/deviatecafe_" target="_blank">@deviatecafe_</a></p>
+<p>Email: <a href="mailto:deviateksa@gmail.com">deviateksa@gmail.com</a></p>
+<p>Phone: 0595990402</p>
+<p>We are happy to serve you anytime, anywhere 😊</p>
+</section>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+<p>DV8 Coffee – Proudly serving Oman & Saudi Arabia, one unforgettable cup at a time.</p>
+</footer>
+
+</body>
+</html>
