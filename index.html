@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deviate Cafe</title>
+    <style>
+        /* ----- General Styling ----- */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #2a0d3f; /* Dark purple background */
+            color: #fff;
+        }
+        a { color: #ffcc00; text-decoration: none; }
+        h1, h2, h3 { color: #ffcc00; margin-bottom: 10px; }
+        p { line-height: 1.5; }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+        /* ----- Header ----- */
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: url('images/hero-placeholder.jpg') center/cover no-repeat; /* Hero placeholder */
+            border-bottom: 3px solid #ffcc00;
+        }
+        header h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        /* ----- Menu Section ----- */
+        .menu-section {
+            margin: 50px 0;
+        }
+        .menu-category {
+            margin-bottom: 30px;
+        }
+        .menu-category h2 {
+            border-bottom: 2px solid #ffcc00;
+            padding-bottom: 5px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-bottom: 1px solid #444;
+        }
+
+        /* ----- Gallery Section ----- */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 50px 0;
+        }
+        .gallery img {
+            width: calc(33% - 10px);
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        /* ----- Footer ----- */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #1f0a30;
+            border-top: 3px solid #ffcc00;
+        }
+        footer a { color: #ffcc00; }
+
+        /* ----- Responsive ----- */
+        @media (max-width: 768px) {
+            .gallery img { width: calc(50% - 10px); }
+        }
+        @media (max-width: 480px) {
+            .gallery img { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Deviate Cafe</h1>
+        <p>Experience the taste of premium desserts & drinks</p>
+    </header>
+
+    <div class="container">
+        <!-- Menu -->
+        <section class="menu-section">
+            <h1>☕✨ Our Menu</h1>
+
+            <!-- Example Category -->
+            <div class="menu-category">
+                <h2>🍞 Signature Desserts</h2>
+                <div class="menu-item"><span>French Toast | فرنش توست</span><span>22 SAR</span></div>
+                <div class="menu-item"><span>Cookies Fall | كوكيز فول</span><span>18 SAR</span></div>
+                <div class="menu-item"><span>Cookies Inject | كوكيز إنجكت</span><span>20 SAR</span></div>
+            </div>
+
+            <div class="menu-category">
+                <h2>🥞 Sweet Crêpes</h2>
+                <div class="menu-item"><span>Nutella Crêpe | كريب نوتيلا</span><span>24 SAR</span></div>
+                <div class="menu-item"><span>Kinder Crêpe | كريب كندر</span><span>26 SAR</span></div>
+                <div class="menu-item"><span>Triple Chocolate Crêpe | كريب شوكولاتة ثلاثية</span><span>26 SAR</span></div>
+                <div class="menu-item"><span>Banana Bender Crêpe | كريب موز بندر</span><span>24 SAR</span></div>
+            </div>
+
+            <div class="menu-category">
+                <h2>🍳 Breakfast Crêpes</h2>
+                <div class="menu-item"><span>Chicken Pesto Crêpe | كريب دجاج بيستو</span><span>29 SAR</span></div>
+                <div class="menu-item"><span>Quesadilla Crêpe | كريب كيساديلا</span><span>28 SAR</span></div>
+                <div class="menu-item"><span>Chicken Farmhouse Crêpe | كريب دجاج فارم هاوس</span><span>30 SAR</span></div>
+            </div>
+
+            <!-- Add other menu categories similarly -->
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery-section">
+            <h1>📸 Gallery</h1>
+            <div class="gallery">
+                <img src="images/cup1.jpg" alt="Deviate Cafe Cup">
+                <img src="images/cup2.jpg" alt="Deviate Cafe Cup">
+                <img src="images/interior1.jpg" alt="Cafe Interior">
+                <img src="images/dessert1.jpg" alt="Dessert">
+                <img src="images/dessert2.jpg" alt="Dessert">
+                <img src="images/interior2.jpg" alt="Cafe Interior">
+            </div>
+        </section>
+
+        <!-- Instagram -->
+        <section class="instagram">
+            <h1>Follow us on Instagram</h1>
+            <p><a href="https://www.instagram.com/deviatecafe_" target="_blank">@deviatecafe_</a></p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Deviate Cafe. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
