@@ -368,3 +368,154 @@
     <!-- Mojito -->
     <div class="menu-category">
       <h3>🍹 Mojito
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DV8 Coffee</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #2a004b;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #3a0066;
+      position: relative;
+      z-index: 10;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      min-height: 80vh;
+      position: relative;
+      z-index: 1;
+    }
+
+    main h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    main p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #ffcc00;
+      color: #2a004b;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e6b800;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #3a0066;
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Falling flowers effect */
+    .flower {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      pointer-events: none;
+      background-image: url('flower.png'); /* Your flower image */
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 0;
+      opacity: 0.8;
+      animation-name: fall;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-50px) rotate(0deg); }
+      100% { transform: translateY(110vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Logo and Menu -->
+  <header>
+    <img src="logo.png" alt="DV8 Coffee Logo">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main id="home">
+    <h1>Welcome to DV8 Coffee</h1>
+    <p>Experience the finest coffee, roasted and crafted with passion. Join us for a unique coffee journey that delights the senses.</p>
+    <a href="#menu" class="btn">Explore Our Menu</a>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 DV8 Coffee | All Rights Reserved
+  </footer>
+
+  <!-- Falling flowers script -->
+  <script>
+    const flowerCount = 15; // number of flowers
+    for (let i = 0; i < flowerCount; i++) {
+      const flower = document.createElement('div');
+      flower.classList.add('flower');
+      flower.style.left = Math.random() * 100 + 'vw';
+      flower.style.animationDuration = (5 + Math.random() * 5) + 's';
+      flower.style.animationDelay = Math.random() * 5 + 's';
+      document.body.appendChild(flower);
+    }
+  </script>
+
+</body>
+</html>
