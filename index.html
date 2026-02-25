@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DV8 Coffee</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-bg: #3A0D5C; 
+      --secondary-bg: #1E1E1E; 
+      --accent-color: #E64AFF; 
+      --text-color: #F5F5F5; 
+      --sub-accent: #5A3E36; 
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--main-bg);
+      color: var(--text-color);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 50px;
+      background-color: var(--secondary-bg);
+      position: relative;
+      z-index: 10;
+    }
+
+    header img { height: 60px; }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover { color: var(--accent-color); }
+
+    /* Hero Video */
+    .hero-video-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0,0,0,0.3); /* subtle dark overlay */
+      color: var(--accent-color);
+      text-align: center;
+      z-index: 2;
+    }
+
+    .video-overlay h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 60px;
+      margin-bottom: 20px;
+      color: var(--accent-color);
+    }
+
+    .video-overlay p {
+      font-size: 24px;
+      max-width: 700px;
+      margin-bottom: 30px;
+    }
+
+    .video-overlay .cta-button {
+      display: inline-block;
+      padding: 15px 35px;
+      background-color: var(--accent-color);
+      color: var(--text-color);
+      font-weight: 700;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .video-overlay .cta-button:hover {
+      background-color: var(--sub-accent);
+    }
+
+    /* Floating 3D Coffee Beans */
+    .coffee-bean {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-image: url('COFFEE_BEAN_IMAGE_URL_HERE.png'); 
+      background-size: cover;
+      pointer-events: none;
+      z-index: 3;
+      animation-name: float-bean;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes float-bean {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-50px) rotate(360deg); opacity: 0; }
+    }
+
+    /* Rest of the page sections (About, Menu, Visit, Footer) remain the same as your previous index.html */
+    section { padding: 80px 20px; max-width: 1000px; margin: auto; }
+    .about h2, .menu h2 { font-family: 'Montserrat', sans-serif; font-size: 48px; color: var(--accent-color); margin-bottom: 30px; text-align: center; }
+    .about p, .menu-item, .visit p, .visit a, footer p { color: var(--text-color); font-size: 18px; line-height: 1.6; }
+    .menu-category h3 { font-family: 'Montserrat', sans-serif; font-size: 28px; color: var(--accent-color); margin-bottom: 15px; border-bottom: 1px solid var(--accent-color); padding-bottom: 5px; }
+    .menu-item { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 18px; }
+    .menu-item span { color: var(--accent-color); }
+    .visit { background-color: var(--secondary-bg); padding: 60px 20px; text-align: center; border-top: 2px solid var(--accent-color); }
+    footer { text-align: center; padding: 40px 20px; background-color: var(--secondary-bg); margin-top: 50px; border-top: 2px solid var(--accent-color); }
+    
+    @media (max-width: 768px) {
+      .about h2, .menu h2 { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="YOUR_LOGO_URL_HERE.png" alt="DV8 Coffee Logo">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#visit">Visit Us</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Video Section -->
+  <section class="hero-video-container">
+    <video autoplay muted loop playsinline>
+      <source src="https://youtu.be/AGDGZfsQ2fk" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay">
+      <h1>DV8 Coffee</h1>
+      <p>Bold flavors. Iconic vibes. Your ultimate coffee lifestyle starts here.</p>
+      <a href="#about" class="cta-button">Explore</a>
+    </div>
+    <!-- Floating coffee beans -->
+    <script>
+      const beans = 15;
+      for(let i=0;i<beans;i++){
+        const bean = document.createElement('div');
+        bean.className = 'coffee-bean';
+        bean.style.left = Math.random()*100+'vw';
+        bean.style.animationDuration = (5 + Math.random()*5)+'s';
+        bean.style.animationDelay = Math.random()*5+'s';
+        document.body.appendChild(bean);
+      }
+    </script>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>DV8 Coffee – Our Story</h2>
+    <p>Born Different. Brewed Better.</p>
+    <p>At DV8 Coffee, every cup tells a story — a story of passion, creativity, and love for Saudi Arabia. Born in the heart of this vibrant nation, DV8 Coffee was founded by Mohammed Sahil with a simple yet bold vision: to break away from the ordinary and bring joy, warmth, and memorable moments to every visitor.</p>
+    <p>Our name, DV8 (“Deviate”), reflects our mission to deviate from the usual, offering unique flavors, premium desserts, and an environment that blends modern elegance with heartfelt hospitality.</p>
+    <p>From rich chocolate coffees to fluffy waffles, delicate crepes, and refreshing smoothies, every item is crafted with care to delight and inspire.</p>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu" id="menu">
+    <h2>☕✨ MENU</h2>
+    <!-- Add your menu items as before -->
+  </section>
+
+  <!-- Visit Section -->
+  <section class="visit" id="visit">
+    <h2>Visit Us</h2>
+    <p>123 Coffee Street, Riyadh, Saudi Arabia</p>
+    <p>Mon - Sun: 7:00 AM - 11:00 PM</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 DV8 Coffee | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
